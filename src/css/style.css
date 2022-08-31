@@ -1,0 +1,263 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif; /* this will change later */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+/* Root -> variable container that allows variables to be included in css */
+
+:root {
+    --section1-BG:      hsla(258, 71%, 9%, 0.98);
+    --section1-H1:      #fefcfe;
+    --section1-text:    #d0cadc;
+    --section1-height:    100vh;
+
+    --section2-BG:      #ffffff;
+    --section2-H1:      #0d0724;
+    --section2-text:    #282631;
+    --section2-height:    150vh;
+
+    --section3-BG:        linear-gradient(to right, #00e7cc, #014cff, #00e7cc);
+    --section3-H1:      #fefcfe;
+    --section3-text:    #d0cadc;
+    --section3-height:    150vh;
+
+    --section4-BG:      #110729;
+    --section4-H1:      #fefcfe;
+    --section4-text:    #d0cadc;
+    --section4-Button:  #04fb88;
+    --section4-input:   #282e40;
+    --section4-height:    100vh;
+    --section4-arrow:   #22125B;
+
+
+    --all-sections-width: 100vw;
+}
+@media screen and (max-width: 400px) {
+    :root {
+        --section2-height: 100vh;
+        --section3-height: 100vh;
+    }
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* bootstrap fixes? nav*/
+.navbar {
+    mix-blend-mode: difference;
+}
+.navbar-brand {
+    margin: 0 16px;
+}
+.nav-link {
+    color: #fff;
+    opacity: 1;
+    font-size: 10px;
+}
+header .btn-outline-success, header .btn {
+    font-size: 10px;
+    color: var(--section4-Button);
+    border-color: var(--section4-Button);
+    border-radius: 50px;
+    padding: 12px;
+}
+header .btn-outline-success:hover, header .btn:hover {
+    font-size: 10px;
+    color: var(--section1-BG);
+    border-color: var(--section1-BG);
+    background-color: var(--section4-Button);
+    border-radius: 50px;
+    padding: 12px;
+}
+
+
+
+
+
+
+
+/* Section 1 */
+.container-section1 {
+    background-color: var(--section1-BG);
+    height: var(--section1-height);
+    width: var(--all-sections-width);
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    color: var(--section1-text);
+}
+.container-section1-content {
+    width: 90%;
+    max-width: 90%;
+    height: 100%;
+    padding-top: 20vh;
+    margin: 0 0 0 auto;
+    display: grid;
+    place-items: center;
+}
+
+.sec1-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+/* Section 2 */
+.container-section2 {
+    background-color: var(--section2-BG);
+    height: var(--section2-height);
+    width: var(--all-sections-width);
+}
+.container-section2 .container {
+    width: 80%;
+    max-width: 80%;
+    height: 100%;
+    padding: 0 0 10vh 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+.container-section2 .container .row1 {
+    display: grid;
+    grid-auto-rows: 2fr 1fr 2fr;
+    grid-row-gap: 5px;
+}
+.container-section2 .container .squize {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 55%;
+}
+.container-section2 .container .noMargin {
+    padding: 0;
+    margin: 0;
+}
+.container-section2 .container .sec2-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+
+
+
+/* Section 3 */
+.container-section3 {
+    background: var(--section3-BG);
+    height: var(--section3-height);
+    width: var(--all-sections-width);
+    color: var(--section3-H1);
+}
+.container-section3 .container {
+    width: 90%;
+    max-width: 90%;
+    height: 100%;
+    padding: 5vh 0;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+.container-section3 .container h2 {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+    font-weight: 100;
+}
+.middle-eles {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.right-border {
+    border-right: 1px solid #fefcfe9c;
+}
+.left-border {
+    border-left: 1px solid #fefcfe9c;
+}
+
+
+
+
+/* Section 4 */
+.container-section4 {
+    background-color: var(--section4-BG);
+    height: var(--section4-height);
+    width: var(--all-sections-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--section4-text);
+}
+.container-section4 .grid-layout-left {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-column-gap: 10px;
+    width: 90%;
+    max-width: 90%;
+    height: 100%;
+    padding:0;
+    margin: auto auto;
+}
+.container-section4 .grid-layout-left .center-it {
+    display: grid !important;
+    place-items: center !important;
+    text-align: center;
+}
+.color-arrow {
+    fill: var(--section4-arrow);
+    cursor: pointer;
+}
+
+.container-section4 input, .container-section4 textarea {
+    background-color: var(--section4-input);
+    border: none;
+    border-radius: 0px;
+    padding: 15px;
+    color: var(--section4-text);
+    font-size: 0.8rem;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.container-section4 textarea {
+    resize: none;
+}
+.container-section4 button {
+    background-color: var(--section4-Button);
+    border: 1px solid transparent;
+    border-radius: 0;
+    padding: 15px;
+    color: var(--section4-BG);
+    font-size: 0.8rem;
+    font-weight: 500;
+    width: 100%;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+.container-section4 button:hover {
+    background-color: var(--section4-BG);
+    color: var(--section4-Button);
+    border: 1px solid var(--section4-Button);
+    transition: all 0.3s ease-in-out;
+}
