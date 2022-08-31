@@ -43,11 +43,11 @@
         <div class="container-section1" id="section1">
             <div class="container-section1-content">
                 <div class="row">
-                    <div class="col-4 row">
-                        <h1 class="col text-left">We scale educational operations.</h1>
-                        <p class="col text-sm-left sec1-text">3os is a Salesforce consulting agency helping forward-thinking institutions optimize operations.</p>
+                    <div class="col-12 col-sm-4 row">
+                        <h1 class="col-12 text-left-lg text-center text-lg-left">We scale educational operations.</h1>
+                        <p class="col-12 text-sm-left sec1-text">3os is a Salesforce consulting agency helping forward-thinking institutions optimize operations.</p>
                     </div>
-                    <div class="col-8 ">
+                    <div class="col-12 col-sm-8">
                             <img src="src/img/top-illo.png" class="img-fluid mx-auto d-block" alt="main-img">
                     </div>
                   </div>
@@ -60,6 +60,7 @@
         <!-- Start: section-2 -->
         <div class="container-section2" id="section2">
             <div class="container">
+                <!-- Text section-2 -->
                 <div class="row row1">
                     
                     <div class="col-12 align-items-end text-center align-self-end noMargin">
@@ -71,9 +72,11 @@
                     </div>
                     
                 </div>
+
+                <!-- Image2 section-2 -->
                 <div class="row">
-                    <div class="col align-self-center text-center" style="overflow:hidden;">
-                        <img src="src/img/2nd-illo.png" class="img-fluid mx-auto d-block" alt="main-img">
+                    <div class="col align-self-start text-center align-items-start" style="overflow:hidden;">
+                        <img src="src/img/2nd-illo.png" class="img-fluid mx-auto d-block " alt="main-img">
                     </div>
                 </div>
             </div>
@@ -88,7 +91,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col align-items-center text-center align-self-center">
-                        <h2>Our proven formula helped one of the top online universities scale up to</h2>
+                        <h2 class="h2">Our proven formula helped one of the top online universities scale up to</h2>
                     </div>
                 </div>
                 
@@ -110,7 +113,7 @@
                 <!-- Columns are always 50% wide, on mobile and desktop -->
                 <div class="row">
                     <div class="col align-items-center text-center align-self-center">
-                        <h2 style="width: 50%;">
+                        <h2 class="h2">
                             and helped generate <span class="display-4">40K+</span> leads per year
                         </h2>
                     </div>
@@ -135,7 +138,7 @@
                                 <h1 class="h1">Let's start building</h1>
                             </div>
                             <div class="row align-items-center text-center align-self-center center-it ">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"  class="color-arrow"><path class="color-arrow" fill-rule="evenodd" d="M1.592 2.712L2.38 7.25h4.87a.75.75 0 110 1.5H2.38l-.788 4.538L13.929 8 1.592 2.712zM.989 8L.064 2.68a1.341 1.341 0 011.85-1.462l13.402 5.744a1.13 1.13 0 010 2.076L1.913 14.782a1.341 1.341 0 01-1.85-1.463L.99 8z"></path></svg>
+                                <svg onclick="focusName()"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"  class="color-arrow"><path class="color-arrow" fill-rule="evenodd" d="M1.592 2.712L2.38 7.25h4.87a.75.75 0 110 1.5H2.38l-.788 4.538L13.929 8 1.592 2.712zM.989 8L.064 2.68a1.341 1.341 0 011.85-1.462l13.402 5.744a1.13 1.13 0 010 2.076L1.913 14.782a1.341 1.341 0 01-1.85-1.463L.99 8z"></path></svg>
                             </div>
                     </div>
 
@@ -143,13 +146,13 @@
                     <div class="col-5">
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="NAME">
+                                <input type="text" class="form-control" id="name" placeholder="NAME">
                             </div>
                             <div class="form-group">
-                              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="EMAIL">
+                              <input type="email" class="form-control" id="email" placeholder="EMAIL">
                             </div>
                             <div class="form-group">
-                              <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="MESSAGE" rows="3" ></textarea>
+                              <textarea class="form-control" id="message" placeholder="MESSAGE" rows="3" ></textarea>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-outline-success my-2 my-sm-1">Submit</button>
