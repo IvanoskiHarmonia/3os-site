@@ -1,4 +1,4 @@
-#3os-personal-website
+# 3os-personal-website
 
 This is the source code for our personal website, which will hosted at: www.3os.us - currently not available.
 
