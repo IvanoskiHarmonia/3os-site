@@ -186,7 +186,7 @@ header .btn-outline-success:hover, header .btn:hover {
     width: 80%;
     max-width: 80%;
     height: 100%;
-    padding: 5vh 0 10vh 0;
+    padding: 5vh 0 5vh 0;
     margin: 0 auto;
     display: -ms-grid;
     display: grid;
@@ -217,9 +217,21 @@ header .btn-outline-success:hover, header .btn:hover {
     .container-section2 .container {
         width: 100%;
         max-width: 100%;
+        padding: 0;
     }
     .container-section2 .container .squize {
         width: 80%;
+    }
+    .container-section2 {
+        height: 100vh;
+    }
+}
+@media all and (max-width: 768px) {
+    .container-section2 .container .squize {
+        width: 70%;
+    }
+    .container-section2 .container {
+        padding: 0;
     }
 }
 .logo {
@@ -273,6 +285,9 @@ header .btn-outline-success:hover, header .btn:hover {
     .container-section3 .container h2 {
         width: 90%;
         font-size: calc(1.3em + 1vw);
+    }
+    .container-section3 {
+        height: 100vh;
     }
 }
 .middle-eles {
