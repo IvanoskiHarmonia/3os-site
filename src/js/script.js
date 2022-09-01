@@ -8,7 +8,6 @@ function focusName() {
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
-    console.log("scrolling");
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
@@ -40,6 +39,24 @@ function changeShadowDir(shadDark, shadLight) {
     $(".shadowed-dark").css("-webkit-filter", shadDark);
     $(".shadowed-light").css("filter", shadLight);
     $(".shadowed-light").css("-webkit-filter", shadLight);
+}
+
+window.onkeydown = function(event) {
+    // spacebar:
+    if(event.keyCode == 32 && event.target == document.body) {
+        event.preventDefault();
+        let color1 = Math.floor(Math.random()*16777215).toString(16);
+        let color2 = Math.floor(Math.random()*16777215).toString(16);
+        let deg = Math.floor(Math.random()*360);
+
+        document.getElementById("section3").style.background = "linear-gradient("+ deg +"deg, #" + color1 + ", #" + color2 + ")";
+        document.getElementById("colors").value = "(" + deg + "deg, #" + color1 + ", #" + color2 + ")";
+    }
+    // enter:
+    else if(event.keyCode == 13) {
+        event.preventDefault();
+        document.getElementById("section3").style.background = "linear-gradient" + document.getElementById("colors").value;
+    }
 }
 
 
