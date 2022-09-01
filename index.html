@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/extra.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- minified jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>3os</title>
 </head>
@@ -14,15 +18,15 @@
 
     <!-- header -->
     <header>
-        <nav class="fixed-top navbar navbar-expand navbar-dark">
-            <a class="navbar-brand" href="#">3os</a>
+        <nav class="fixed-top navbar navbar-expand navbar-dark shadowed-light-text p-0" id="navbar">
+            <a class="navbar-brand" href="#section1"><img src="src/img/logo.png" class="img-fluid mx-auto d-block nav-logo" alt="logo-section2"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
-              <ul class="form-inline my-2 my-lg-0">
+              <ul class="my-0 my-lg-2 form-inline">
                 <p class="text-uppercase mr-sm-1 text-center" style="margin:0 auto; font-size:medium"><a class="nav-link" href="#section2">custom solutions</a></p>
                 <a href="#section4"><button class="text-uppercase btn btn-outline-success my-2 my-sm-1" >contact us</button></a>
                 </ul>
@@ -41,16 +45,16 @@
 
         <!-- Start: section-1  -->
         <div class="container-section1" id="section1">
-            <div class="container-section1-content">
-                <div class="row">
-                    <div class="col-12 col-sm-4 row">
-                        <h1 class="col-12 text-left-lg text-center text-lg-left">We scale educational operations.</h1>
-                        <p class="col-12 text-sm-left sec1-text">3os is a Salesforce consulting agency helping forward-thinking institutions optimize operations.</p>
+            <div class="container container-section1-content shadowed-light-text justify-conten">
+                <div class="row p-0 m-0" style="overflow-y: hidden;">
+                    <div class="col-12 col-md-4 justify-content">
+                        <h1 class="col-12 text-md-left text-center text-lg-left h1">We scale educational operations.</h1>
+                        <p class="col-12 text-md-left sec1-text">3os is a Salesforce consulting agency helping forward-thinking institutions optimize operations.</p>
                     </div>
-                    <div class="col-12 col-sm-8">
-                            <img src="src/img/top-illo.png" class="img-fluid mx-auto d-block" alt="main-img">
+                    <div class="col-12 col-md-8 p-0" style="overflow-y: hidden;">
+                            <img src="src/img/top-illo.png" class="img-fluid mx-auto d-block shadowed-light" alt="main-img">
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
         <!-- End: section-1  -->
@@ -58,13 +62,13 @@
 
 
         <!-- Start: section-2 -->
-        <div class="container-section2" id="section2">
+        <div class="container-section2 p-0 m-0" id="section2">
             <div class="container">
                 <!-- Text section-2 -->
-                <div class="row row1">
+                <div class="row row1 shadowed-dark-text">
                     
                     <div class="col-12 align-items-end text-center align-self-end noMargin">
-                        <img src="src/img/2nd-i.png" class="img-fluid mx-auto d-block" alt="logo-section2">
+                        <img src="src/img/logo.png" class="img-fluid mx-auto d-block logo shadowed-dark" alt="logo-section2">
                     </div>
                     <h2 class="col-12 h3 text-center align-items-center align-self-center noMargin">Custom Solutions</h2>
                     <div class="col-12 align-self-center text-center">
@@ -74,9 +78,9 @@
                 </div>
 
                 <!-- Image2 section-2 -->
-                <div class="row">
-                    <div class="col align-self-start text-center align-items-start" style="overflow:hidden;">
-                        <img src="src/img/2nd-illo.png" class="img-fluid mx-auto d-block " alt="main-img">
+                <div class="row" style="justify-content: center;">
+                    <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-8 align-self-start text-center align-items-start" style="overflow:hidden;">
+                        <img src="src/img/2nd-illo.png" class="img-fluid mx-auto d-block shadowed-dark" alt="main-img">
                     </div>
                 </div>
             </div>
@@ -87,8 +91,8 @@
 
 
         <!-- Start: section-3 -->
-        <div class="container-section3" id="section1">
-            <div class="container">
+        <div class="container-section3 p-0 m-0" id="section1">
+            <div class="container shadowed-dark-text">
                 <div class="row">
                     <div class="col align-items-center text-center align-self-center">
                         <h2 class="h2">Our proven formula helped one of the top online universities scale up to</h2>
@@ -126,33 +130,33 @@
 
 
         <!-- section-4 -->
-        <div class="container-section4" id="section4">
-            <div class="container">
+        <div class="container-section4 p-0 m-0" id="section4">
+            <!-- <div class="container"> -->
                 <div class="row no-gutters">
                     <!-- Left Section -->
-                    <div class="col-7 grid-layout-left">
-                            <div class="row align-items-center text-center align-self-center center-it">
-                                <img src="src/img/2nd-i.png" class="img-fluid mx-auto d-block" alt="logo-section4">
+                    <div class="col-12 col-sm-8 grid-layout-left shadowed-light-text">
+                            <div class="col-12 align-items-center text-center align-self-center center-it">
+                                <img src="src/img/logo.png" class="img-fluid mx-auto d-block logo shadowed-dark" alt="logo-section4">
                             </div>
-                            <div class="row align-items-center text-center align-self-center center-it">
+                            <div class="col-12 align-items-center text-center align-self-center center-it">
                                 <h1 class="h1">Let's start building</h1>
                             </div>
-                            <div class="row align-items-center text-center align-self-center center-it ">
-                                <svg onclick="focusName()"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"  class="color-arrow"><path class="color-arrow" fill-rule="evenodd" d="M1.592 2.712L2.38 7.25h4.87a.75.75 0 110 1.5H2.38l-.788 4.538L13.929 8 1.592 2.712zM.989 8L.064 2.68a1.341 1.341 0 011.85-1.462l13.402 5.744a1.13 1.13 0 010 2.076L1.913 14.782a1.341 1.341 0 01-1.85-1.463L.99 8z"></path></svg>
+                            <div class="col-12 align-items-center text-center align-self-center center-it ">
+                                <svg class="color-arrow" onclick="focusName()"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path  fill-rule="evenodd" d="M1.592 2.712L2.38 7.25h4.87a.75.75 0 110 1.5H2.38l-.788 4.538L13.929 8 1.592 2.712zM.989 8L.064 2.68a1.341 1.341 0 011.85-1.462l13.402 5.744a1.13 1.13 0 010 2.076L1.913 14.782a1.341 1.341 0 01-1.85-1.463L.99 8z"></path></svg>
                             </div>
                     </div>
 
                     <!-- Form -->
-                    <div class="col-5">
+                    <div class="col-12 col-sm-4 grid-layout-right">
                         <form>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" placeholder="NAME">
                             </div>
                             <div class="form-group">
-                              <input type="email" class="form-control" id="email" placeholder="EMAIL">
+                                <input type="email" class="form-control" id="email" placeholder="EMAIL">
                             </div>
                             <div class="form-group">
-                              <textarea class="form-control" id="message" placeholder="MESSAGE" rows="3" ></textarea>
+                                <textarea class="form-control" id="message" placeholder="MESSAGE" rows="3" ></textarea>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-outline-success my-2 my-sm-1">Submit</button>
@@ -160,7 +164,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            <!-- </div> container -->
         </div>
         <!-- End: section-4 -->
 

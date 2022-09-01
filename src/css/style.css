@@ -1,10 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html, body {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif; /* this will change later */
-    overflow-x: hidden;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
     scroll-behavior: smooth;
 }
 
@@ -30,9 +38,9 @@ html, body {
     --section2-BG:      #ffffff;
     --section2-H1:      #0d0724;
     --section2-text:    #282631;
-    --section2-height:    150vh;
+    --section2-height:    130vh;
 
-    --section3-BG:        linear-gradient(to right, #00e7cc, #014cff, #00e7cc);
+    --section3-BG:        linear-gradient(125deg, #00e7cc, #014cff, #00e7cc);
     --section3-H1:      #fefcfe;
     --section3-text:    #d0cadc;
     --section3-height:    150vh;
@@ -44,6 +52,7 @@ html, body {
     --section4-input:   #282e40;
     --section4-height:    100vh;
     --section4-arrow:   #22125B;
+    --section4-arrow-hover: #04fb88;
 
 
     --all-sections-width: 100vw;
@@ -65,12 +74,25 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.container-section1, .container-section2, .container-section3, .container-section4, .navbar {
+    overflow-x: hidden;
+}
 /* bootstrap fixes? nav*/
 .navbar {
-    mix-blend-mode: difference;
+    /* it's either or, it cannot be both. */
+    /* mix-blend-mode: difference !important; */
+    background: rgba(0, 0, 0, 0.6) !important;
 }
 .navbar-brand {
-    margin: 0 16px;
+    margin: 0 20px;
+}
+.form-inline {
+    margin: 0px 20px !important;
+}
+.nav-logo {
+    width: 32px;
+    height: 32px;
+    color: white;
 }
 .nav-link {
     color: #fff;
@@ -94,7 +116,7 @@ header .btn-outline-success, header .btn {
 header .btn-outline-success:hover, header .btn:hover {
     font-size: 0.6em;
     color: var(--section1-BG);
-    border-color: var(--section1-BG);
+    border-color: transparent;
     background-color: var(--section4-Button);
 }
 
@@ -109,9 +131,9 @@ header .btn-outline-success:hover, header .btn:hover {
     background-color: var(--section1-BG);
     height: var(--section1-height);
     width: var(--all-sections-width);
-    /* flex-direction: column;
+    /* /* flex-direction: column; */
     justify-content: center;
-    align-items: center; */
+    /* align-items: center; */ 
     color: var(--section1-text);
 }
 .container-section1-content {
@@ -119,17 +141,21 @@ header .btn-outline-success:hover, header .btn:hover {
     max-width: 90%;
     height: 100%;
     padding-top: 20vh;
-    margin: 0 0 0 auto;
+    margin: 0 auto !important;
+    display: -ms-grid;
     display: grid;
     place-items: center;
 }
-@media all and (max-width: 576px) {
+@media all and (max-width: 768px) {
     .container-section1-content {
         width: 100%;
         max-width: 100%;
-        padding-top: 13vh;
+        padding: 0;
     }
     
+}
+.container-section1 .container-section1-content .h1 {
+    font-size: calc(100% + 2vw + 1vh);
 }
 .sec1-text {
     font-size: 0.8rem;
@@ -140,6 +166,11 @@ header .btn-outline-success:hover, header .btn:hover {
 .container-section1-content .h2 {
     font-size: 2em !important;
 }
+
+
+
+
+
 
 
 
@@ -155,10 +186,13 @@ header .btn-outline-success:hover, header .btn:hover {
     height: 100%;
     padding: 5vh 0 10vh 0;
     margin: 0 auto;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 1fr 2fr;
     grid-template-rows: 1fr 2fr;
 }
 .container-section2 .container .row1 {
+    display: -ms-grid;
     display: grid;
     grid-auto-rows: auto;
     grid-row-gap: 5px;
@@ -177,6 +211,33 @@ header .btn-outline-success:hover, header .btn:hover {
     font-size: 0.8rem;
     font-weight: 500;
 }
+@media all and (max-width: 576px) {
+    .container-section2 .container {
+        width: 100%;
+        max-width: 100%;
+    }
+    .container-section2 .container .squize {
+        width: 80%;
+    }
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -194,6 +255,7 @@ header .btn-outline-success:hover, header .btn:hover {
     height: 100%;
     padding: 5vh 0;
     margin: 0 auto;
+    display: -ms-grid;
     display: grid;
     grid-auto-rows: 1fr;
 }
@@ -213,6 +275,7 @@ header .btn-outline-success:hover, header .btn:hover {
 .middle-eles {
     height: 100%;
     width: 100%;
+    display: -ms-grid;
     display: grid;
     place-items: center;
 }
@@ -233,28 +296,79 @@ header .btn-outline-success:hover, header .btn:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Section 4 */
 .container-section4 {
     background-color: var(--section4-BG);
     height: var(--section4-height);
     width: var(--all-sections-width);
-    display: flex;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     color: var(--section4-text);
 }
-.container-section4 .grid-layout-left {
-    display: grid;
-    grid-auto-rows: 1fr;
-    grid-column-gap: 10px;
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.no-gutters .col,
+.no-gutters [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+.container-section4 .row {
     width: 90%;
     max-width: 90%;
-    height: 100%;
-    padding:0;
+    margin: 0 auto 0 0;
+}
+.container-section4 .grid-layout-left {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-row-gap: 20px;
     margin: auto auto;
 }
+.container-section4 .no-gutters .h1 {
+    font-size: calc(100% + 3vw + 1vh);
+    max-width: 100%;
+    width: 100%;
+}
+@media all and (max-width: 576px) {
+    .container-section4 .grid-layout-left {
+        grid-row-gap: 15px;
+        width: 80%;
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+    .container-section4 .grid-layout-right {
+        width: 80%;
+        max-width: 80%;
+        margin: auto auto;
+    }
+    .container-section4 .row {
+        margin: 0 auto;
+    }
+    
+}
 .container-section4 .grid-layout-left .center-it {
+    display: -ms-grid !important;
     display: grid !important;
     place-items: center !important;
     text-align: center;
@@ -263,7 +377,9 @@ header .btn-outline-success:hover, header .btn:hover {
     fill: var(--section4-arrow);
     cursor: pointer;
 }
-
+.color-arrow:hover {
+    fill: var(--section4-arrow-hover);
+}
 .container-section4 input, .container-section4 textarea {
     background-color: var(--section4-input);
     border: none;
@@ -273,10 +389,14 @@ header .btn-outline-success:hover, header .btn:hover {
     font-size: 0.8rem;
     font-weight: 500;
     width: 100%;
-    margin-bottom: 10px;
 }
 .container-section4 textarea {
     resize: none;
+}
+.container-section4 input:focus, .container-section4 textarea:focus {
+    background-color: var(--section4-input);
+    color:white;
+    font-weight: 300;
 }
 .container-section4 button {
     background-color: var(--section4-Button);
@@ -288,11 +408,28 @@ header .btn-outline-success:hover, header .btn:hover {
     font-weight: 500;
     width: 100%;
     opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-.container-section4 button:hover {
+.container-section4 button:hover, .container-section4 button:focus {
     background-color: var(--section4-BG);
     color: var(--section4-Button);
     border: 1px solid var(--section4-Button);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+}
+@media all and (max-width: 576px) {
+    .container-section4 input, .container-section4 textarea {
+        padding: 10px;
+        font-size: 0.7rem;
+        font-weight: 400;
+    }
+    .container-section4 button {
+        font-size: 0.7rem;
+    }
+    .container-section4 .no-gutters .h1 {
+        font-size: calc(100% + 3vw + 1vh) !important;
+    }
 }
