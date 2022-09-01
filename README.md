@@ -13,3 +13,7 @@ This is the source code for our personal website, which will hosted at: www.3os.
 
 1. Desktop Template finished (Not Responsive, no logos, form not working).
 
+
+## Sending the email
+
+- Sending an email on github is not going to work because post method is not allowed on github pages. But this later on will work on a server.
