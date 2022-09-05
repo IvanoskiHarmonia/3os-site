@@ -1,9 +1,15 @@
+window.onload = function() {
+    if($(window).scrollTop() > 0) 
+        document.getElementById("navbar").style.backgroundColor =  "hsla(257, 70%, 9%, 0.671)";
+    else 
+        document.getElementById("navbar").style.backgroundColor = "transparent";
 
 
+    mediaQuery("(max-width:870px)");
+}
 
-// focus on name when arrow clicked:
-function focusName() {
-    document.getElementById("name").focus();
+window.onresize = function() {
+    mediaQuery("(max-width: 870px)");
 }
 
 var prevScrollpos = window.pageYOffset;
@@ -15,10 +21,18 @@ window.onscroll = function() {
         document.getElementById("navbar").style.top = "-15vh";
     }
     prevScrollpos = currentScrollPos;
+
+    if($(window).scrollTop() > 0) 
+        document.getElementById("navbar").style.backgroundColor =  "hsla(257, 70%, 9%, 0.671)";
+    
+    else 
+        document.getElementById("navbar").style.backgroundColor = "transparent";
+    
 }
 
 // change shadow direction:
 window.onmousemove = function(event) {
+    // console.log($(window).scrollTop());
     if(event.clientX > window.innerWidth/2) {
         $(".shadowed-dark-text").css("text-shadow", "-1px 1px 1px rgba(34, 34, 34, 0.15)");
         $(".shadowed-light-text").css("text-shadow", "-1px 1px 1px rgba(255, 255, 255, 0.15)");
@@ -41,23 +55,13 @@ function changeShadowDir(shadDark, shadLight) {
     $(".shadowed-light").css("-webkit-filter", shadLight);
 }
 
-window.onkeydown = function(event) {
-    // spacebar:
-    if(event.keyCode == 32 && event.target == document.body) {
-        event.preventDefault();
-        let color1 = Math.floor(Math.random()*16777215).toString(16);
-        let color2 = Math.floor(Math.random()*16777215).toString(16);
-        let deg = Math.floor(Math.random()*360);
 
-        document.getElementById("section3").style.background = "linear-gradient("+ deg +"deg, #" + color1 + ", #" + color2 + ")";
-        document.getElementById("colors").value = "(" + deg + "deg, #" + color1 + ", #" + color2 + ")";
-    }
-    // enter:
-    else if(event.keyCode == 13) {
-        event.preventDefault();
-        document.getElementById("section3").style.background = "linear-gradient" + document.getElementById("colors").value;
-    }
+
+function mediaQuery(width) {
+    if(window.matchMedia(width).matches) 
+        document.getElementById("contacts").innerHTML = "(305) 558-7798<br>SAYHELLO@3OS.COM";
+    else 
+        document.getElementById("contacts").innerHTML = "(305) 558-7798 &emsp;|&emsp; SAYHELLO@3OS.COM";
 }
-
 
 
