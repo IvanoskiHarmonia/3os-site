@@ -11,8 +11,6 @@ html, body {
     margin: 0 !important;
     padding: 0 !important;
     font-family: 'Open Sans', sans-serif; /* this will change later */
-    /* overflow-x: hidden; */
-    /* overflow-y: auto; */
     scroll-behavior: smooth;
 }
 
@@ -82,9 +80,15 @@ body::-webkit-scrollbar {
 /* centering containers */
 .center-container {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .container-section1, .container-section2, .container-section3, .container-section4, .navbar {
@@ -113,9 +117,6 @@ body::-webkit-scrollbar {
 /* bootstrap fixes? nav*/
 .navbar {
     width: 100vw;
-    /* it's either or, it cannot be both. */
-    /* mix-blend-mode: difference !important; */
-    /* background-color: hsla(257, 70%, 9%, 0.671); */
 }
 .navbar-brand {
     margin: 5px 10px 0 10px !important;
@@ -167,11 +168,9 @@ header .btn-outline-success:hover, header .btn:hover {
     background-color: var(--section1-BG);
     height: var(--section1-height);
     width: var(--all-sections-width);
-    /* /* flex-direction: column; */
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    /* align-items: center; */ 
     color: var(--section1-text);
 }
 .container-section1-content {
@@ -366,9 +365,13 @@ header .btn-outline-success:hover, header .btn:hover {
 }
 .logo-section-3 {
     width: 100vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     position: absolute;
-    transform: translate(0%, -90%);
+    -webkit-transform: translate(0%, -90%);
+        -ms-transform: translate(0%, -90%);
+            transform: translate(0%, -90%);
     fill: rgba(255, 255, 255, 0.3);
     z-index: 5;
     overflow-x: hidden;
@@ -501,7 +504,8 @@ header .btn-outline-success:hover, header .btn:hover {
     color:white;
     font-weight: 300;
     outline: none !important;
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
 }
 .container-section4 button {
     background-color: var(--section4-BG);
@@ -511,6 +515,8 @@ header .btn-outline-success:hover, header .btn:hover {
     color: var(--section4-Button);
     font-size: 0.8rem;
     font-weight: 500;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     opacity: 1;
     -webkit-transition: all 0.5s ease-in-out;
