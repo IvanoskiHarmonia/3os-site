@@ -191,11 +191,16 @@ header .btn-outline-success:hover, header .btn:hover {
     }
     
 }
+@media all and (min-height: 700px) {
+    .img-phone {
+        margin-top: 100px;
+    }
+}
 .container-section1 .container-section1-content .h1 {
     font-size: calc(100% + 2vw + 1vh);
 }
 .sec1-text {
-    font-size: calc(35% + 0.5vw + 1vh);
+    font-size: calc(35% + 0.8vw + 1vh);
     font-weight: 400;
     text-align: center;
     margin-bottom: 20px;
@@ -266,7 +271,7 @@ header .btn-outline-success:hover, header .btn:hover {
     margin: 0;
 }
 .container-section2 .container .sec2-text {
-    font-size: calc(50% + 0.5vw + 1vh);
+    font-size: calc(50% + 0.8vw + 1vh);
     font-weight: 400;
 }
 @media all and (max-width: 768px) {
@@ -375,6 +380,11 @@ header .btn-outline-success:hover, header .btn:hover {
     fill: rgba(255, 255, 255, 0.3);
     z-index: 5;
     overflow-x: hidden;
+}
+.logo-g {
+    -webkit-transform: translate(-10.000000,42.000) scale(0.1,0.1);
+    -ms-transform: translate(-10.000000,42.000) scale(0.1,0.1) !important;
+    transform: translate(-10.000000,42.000) scale(0.1,0.1) !important;
 }
 
 
