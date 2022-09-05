@@ -41,7 +41,7 @@ html, body {
     --section3-BG:        linear-gradient(130deg, #AB2BF5, #ab2bf536 30.71%),
                             linear-gradient( 50deg,  #092f72, #092f7210 90.71%),
                             linear-gradient( -15deg, #2158f4, #2158f410 90.71%),
-                            linear-gradient( -130deg,  #110828, #11082810 90.71%),
+                            linear-gradient( -130deg,  #110828, #11082850 100%),
                             linear-gradient( 200deg, #469BF6, #469bf62c 80%);
 
     --section3-H1:      #fefcfe;
@@ -114,7 +114,7 @@ body::-webkit-scrollbar {
 
 
 
-/* bootstrap fixes? nav*/
+/* nav */
 .navbar {
     width: 100vw;
 }
@@ -189,26 +189,25 @@ header .btn-outline-success:hover, header .btn:hover {
         max-width: 100%;
         padding: 0;
     }
-    
 }
 @media all and (min-height: 700px) {
     .img-phone {
         margin-top: 100px;
     }
 }
-.container-section1 .container-section1-content .h1 {
+.container-section1 .container-section1-content .h1, .container-section2 .container .h3 {
     font-size: calc(100% + 2vw + 1vh);
 }
-.sec1-text {
+.sec12-text {
     font-size: calc(35% + 0.8vw + 1vh);
     font-weight: 400;
-    text-align: center;
-    margin-bottom: 20px;
 }
-.container-section1-content .h2 {
-    font-size: 2em !important;
+@media  all and (max-width: 768px) {
+    .sec12-text {
+        font-size: calc(35% + 2vw + 1vh);
+        font-weight: 400;
+    }
 }
-
 
 
 
@@ -266,17 +265,9 @@ header .btn-outline-success:hover, header .btn:hover {
     text-align: center;
     width: 55%;
 }
-.container-section2 .container .noMargin {
-    padding: 0;
-    margin: 0;
-}
-.container-section2 .container .sec2-text {
-    font-size: calc(50% + 0.8vw + 1vh);
-    font-weight: 400;
-}
 @media all and (max-width: 768px) {
     .container-section2 .container .squize {
-        width: 70%;
+        width: 90%;
     }
     .container-section2 .container {
         padding: 0;
