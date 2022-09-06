@@ -67,6 +67,19 @@ html, body {
     --large-screen: 1200px;
 
 }
+@font-face {
+    font-family: 'Times CE Roman';
+    src: url("../fonts/Times CE Roman.otf") format("openType");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'filsonpro-regular';
+    src: url('../fonts/Fonts/filsonpro-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @media screen and (max-width: 400px) {
     :root {
         --section2-height: 100vh;
@@ -94,8 +107,19 @@ body::-webkit-scrollbar {
 .container-section1, .container-section2, .container-section3, .container-section4, .navbar {
     overflow-x: hidden;
 }
-
-
+.filsonpro-regular {
+    font-family: 'filsonpro-regular', Georgia, 'Times New Roman', Times, serif !important;
+    letter-spacing: -2px;
+}
+.hide {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+.appear {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 0.5s ease-in-out;
+}
 
 
 
@@ -171,6 +195,7 @@ header .btn-outline-success:hover, header .btn:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    overflow-y: hidden;
     color: var(--section1-text);
 }
 .container-section1-content {
@@ -548,4 +573,8 @@ header .btn-outline-success:hover, header .btn:hover {
         margin-bottom: 1rem !important;
         
     }
+}
+
+.h1, .h2, .h3, .display-3, .display-2, .display-1, .display-4 {
+    font-family: 'Times CE Roman', 'Times_CE_Roman' !important;
 }

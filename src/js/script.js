@@ -1,37 +1,64 @@
-window.onload = function() {
-    if($(window).scrollTop() > 0) 
-        document.getElementById("navbar").style.backgroundColor =  "hsla(257, 70%, 9%, 0.671)";
-    else 
-        document.getElementById("navbar").style.backgroundColor = "transparent";
+var prevScrollpos = window.pageYOffset;
 
+
+window.onload = function() {
+    changeNavbarColor();
 
     mediaQuery("(max-width:870px)");
+    (async () => {
+        await appearElements(document.getElementById("navbar"));
+        await appearElements(document.getElementById("section1"));
+    })();
 }
+// sleep function:
+function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 
+
+// when window is resized always check if media query is true:
 window.onresize = function() {
     mediaQuery("(max-width: 870px)");
 }
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    console.log($(window).scrollTop())
-    if($(window).scrollTop() > 75) {
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-15vh";
-        }
-    }
-    prevScrollpos = currentScrollPos;
 
+window.onscroll = function() {
+
+    // change color of navbar when on top, and make navbar shrink up when scrolling down and appear when scrolling up:
+    prevScrollpos = navbarScroll();
+    changeNavbarColor()
+
+    // appear elements when scrolling:
+    checkIfInView("#section2", "section2");
+    checkIfInView("#section3", "section3");
+    checkIfInView("#section4", "section4");
+}
+
+// change color of navbar when on top:
+function changeNavbarColor() {
     if($(window).scrollTop() > 0) 
         document.getElementById("navbar").style.backgroundColor =  "hsla(257, 70%, 9%, 0.671)";
-    
     else 
         document.getElementById("navbar").style.backgroundColor = "transparent";
-    
 }
+
+
+// Make navbar shrink up when scrolling down and appear when scrolling up:
+function navbarScroll() {
+    var currentScrollPos = window.pageYOffset;
+        if($(window).scrollTop() > 75) {
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-15vh";
+            }
+        }
+    return currentScrollPos;
+}
+
+
+
+
+
+
 
 // change shadow direction:
 window.onmousemove = function(event) {
@@ -60,6 +87,13 @@ function changeShadowDir(shadDark, shadLight) {
 
 
 
+
+
+
+
+
+
+// changing text of contant on different witdh of screen:
 function mediaQuery(width) {
     if(window.matchMedia(width).matches) 
         document.getElementById("contacts").innerHTML = "(305) 558-7798<br>SAYHELLO@3OS.COM";
@@ -67,4 +101,28 @@ function mediaQuery(width) {
         document.getElementById("contacts").innerHTML = "(305) 558-7798 &emsp;|&emsp; SAYHELLO@3OS.COM";
 }
 
+
+
+
+
+
+
+
+
+
+// when loading add class .appear to every element that has class .hide one by one:
+async function appearElements(section) {
+    var appear = section.getElementsByClassName("hide");
+    for(var i = 0; i < appear.length; i++) {
+        appear[i].classList.add("appear");
+        await sleep(500);
+        // appear[i].classList.remove("hide");
+    }
+}
+
+function checkIfInView(sectionId, sectionName) {
+    if($(sectionId).offset().top - $(window).scrollTop() < 400) {
+        appearElements(document.getElementById(sectionName));
+    }
+}
 
