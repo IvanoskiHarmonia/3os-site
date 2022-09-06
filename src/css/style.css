@@ -462,6 +462,10 @@ header .btn-outline-success:hover, header .btn:hover {
     max-width: 100%;
     width: 100%;
 }
+.container-section4 .no-gutters .h1, .container-section4 .no-gutters .p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
 @media all and (min-height: 700px) {
     .container-section4 .grid-layout-left {
         margin: auto auto;
@@ -519,15 +523,17 @@ header .btn-outline-success:hover, header .btn:hover {
     border-radius: 0px;
     padding: 3px 0;
     color: var(--section4-text);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     width: 100%;
+    transition: all 0.2s ease-in-out;
 }
 .container-section4 input:focus {
     background-color: var(--section4-input);
     letter-spacing: 1px; 
     color:white;
-    font-weight: 300;
+    padding: 4px 3px;
+    font-weight: 500;
     outline: none !important;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
@@ -538,7 +544,7 @@ header .btn-outline-success:hover, header .btn:hover {
     border-radius: 50px;
     padding: 7px 20px;
     color: var(--section4-Button);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 500;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -558,12 +564,12 @@ header .btn-outline-success:hover, header .btn:hover {
 }
 @media all and (max-width: 576px) {
     .container-section4 input{
-        padding: 10px;
-        font-size: 0.7rem;
+        padding: 3px 0;
+        font-size: 0.8rem;
         font-weight: 400;
     }
     .container-section4 button {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
     .container-section4 .no-gutters .h1 {
         font-size: calc(100% + 3vw + 1vh) !important;
