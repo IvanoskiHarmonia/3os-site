@@ -56,7 +56,7 @@ body::-webkit-scrollbar {
 :root {
     --section1-BG:      hsla(258, 71%, 9%, 0.98);
     --section1-H1:      #fefcfe;
-    --section1-text:    #d0cadc;
+    --section1-text:    #ffffff;
     --section1-height:    100vh;
 
     --section2-BG:      #ffffff;
@@ -235,10 +235,11 @@ header .btn-outline-success:hover, header .btn:hover {
     color: var(--section1-text);
 }
 .container-section1-content {
-    width: 90%;
-    max-width: 90%;
+    width: 95%;
+    max-width: 95%;
     height: 100%;
-    padding-top: 20vh;
+    padding: 0 !important;
+    padding-top: 20vh !important;
     margin: 0 auto !important;
     display: -ms-grid;
     display: grid;
@@ -248,7 +249,7 @@ header .btn-outline-success:hover, header .btn:hover {
     .container-section1-content {
         width: 100%;
         max-width: 100%;
-        padding: 0;
+        padding: 0 !important;
     }
 }
 @media all and (min-height: 700px) {
@@ -263,11 +264,26 @@ header .btn-outline-success:hover, header .btn:hover {
     font-size: calc(35% + 0.8vw + 1vh);
     font-weight: 100;
 }
+@media (min-width: 1200px) {
+    .container-section1 .container {
+        max-width: 95% !important;
+        margin: 0 auto !important;
+    }
+}
+@media (min-width: 992px) {
+    .container-section1 .container {
+        max-width: 95% !important;
+    }
+}
 @media  all and (max-width: 768px) {
     .sec12-text {
         font-size: calc(35% + 2vw + 1vh);
     }
+    .container-section1 .container {
+        max-width: 95% !important;
+    }
 }
+
 
 
 

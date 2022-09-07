@@ -4,10 +4,10 @@ var prevScrollpos = window.pageYOffset;
 window.onload = function() {
     changeNavbarColor();
 
-    mediaQueryContact("(max-width:870px)");
+    // mediaQueryContact("(max-width:870px)");
     (async () => {
-        await appearElements(document.getElementById("navbar"));
-        await appearElements(document.getElementById("section1"));
+        appearElements(document.getElementById("navbar"), 250);
+        appearElements(document.getElementById("section1"), 250);
     })();
 }
 // sleep function:
@@ -15,9 +15,9 @@ function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 
 
 // when window is resized always check if media query is true:
-window.onresize = function() {
-    mediaQueryContact("(max-width: 870px)");
-}
+// window.onresize = function() {
+//     mediaQueryContact("(max-width: 870px)");
+// }
 
 
 window.onscroll = function() {
@@ -111,18 +111,18 @@ function mediaQueryContact(width) {
 
 
 // when loading add class .appear to every element that has class .hide one by one:
-async function appearElements(section) {
+async function appearElements(section, speedOfAnimation) {
     var appear = section.getElementsByClassName("hide");
     for(var i = 0; i < appear.length; i++) {
         appear[i].classList.add("appear");
-        await sleep(500);
+        await sleep(speedOfAnimation);
         // appear[i].classList.remove("hide");
     }
 }
 
 function checkIfInView(sectionId, sectionName) {
     if($(sectionId).offset().top - $(window).scrollTop() < 400) {
-        appearElements(document.getElementById(sectionName));
+        appearElements(document.getElementById(sectionName), 500);
     }
 }
 
