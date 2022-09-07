@@ -429,6 +429,12 @@ header .btn-outline-success:hover, header .btn:hover {
 .left-border {
     border-left: 1px solid #fefcfe9c;
 }
+.container-section3 .container .p {
+    font-size: calc(0.6em + 0.5vw) !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color:var(--section1-text);
+}
 .container-section3 .container .display-3 {
     font-size: calc(100% + 6vw + 1vh);
 }
