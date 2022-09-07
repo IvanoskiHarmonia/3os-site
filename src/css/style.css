@@ -1,12 +1,45 @@
+/*
+    * Prefixed by https://autoprefixer.github.io
+    * PostCSS: v8.4.14,
+    * Autoprefixer: v10.4.7
+    * Browsers: last 4 version
+*/
+@font-face {
+    font-family: 'Times';
+    src: url('../fonts/times/TimesCE-Roman.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/times/TimesCE-Roman.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/times/TimesCE-Roman.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/times/TimesCE-Roman.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/times/TimesCE-Roman.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Filson Pro';
+    src: url('../fonts/filson/FilsonPro-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/filson/FilsonPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/filson/FilsonPro-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../fonts/filson/FilsonPro-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+        url('../fonts/filson/FilsonPro-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/filson/FilsonPro-Regular.svg#FilsonPro-Regular') format('svg'); /* Legacy iOS */
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 html, body {
     height: 100%;
     width: 100%;
     margin: 0 !important;
     padding: 0 !important;
-    font-family: 'Open Sans', sans-serif; /* this will change later */
+    font-family: 'Filson Pro', sans-serif; /* this will change later */
     scroll-behavior: smooth;
 }
-
+body::-webkit-scrollbar {
+    display: none;
+}
 * {
     margin: 0;
     padding: 0;
@@ -60,18 +93,7 @@ html, body {
     --large-screen: 1200px;
 
 }
-@font-face {
-    font-family: 'Times CE Roman';
-    src: url("../fonts/Times CE Roman.otf") format("openType");
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'filsonpro-regular';
-    src: url('../fonts/Fonts/filsonpro-regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 @media screen and (max-width: 400px) {
     :root {
@@ -79,9 +101,7 @@ html, body {
         --section3-height: 100vh;
     }
 }
-body::-webkit-scrollbar {
-    display: none;
-}
+
 
 /* centering containers */
 .center-container {
@@ -101,8 +121,13 @@ body::-webkit-scrollbar {
     overflow-x: hidden;
 }
 .filsonpro-regular {
-    font-family: 'filsonpro-regular', Georgia, 'Times New Roman', Times, serif !important;
+    font-family: 'Filson Pro', Georgia, 'Times New Roman', Times, serif !important;
     letter-spacing: -2px;
+}
+.filsonpro-regular-normal {
+    font-family: 'Filson Pro', Georgia, 'Times New Roman', Times, serif !important;
+    letter-spacing: 0px;
+    font-weight: 100 !important;
 }
 .hide {
     opacity: 0;
@@ -155,6 +180,18 @@ body::-webkit-scrollbar {
     color: rgb(148, 255, 193);
     opacity: 1;
     font-size: 10px;
+}
+.nav-logo {
+    fill: #fffffff0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.nav-logo:hover {
+    fill: #04fb88;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 header .btn-outline-success, header .btn {
     font-size: 0.6em;
@@ -224,12 +261,11 @@ header .btn-outline-success:hover, header .btn:hover {
 }
 .sec12-text {
     font-size: calc(35% + 0.8vw + 1vh);
-    font-weight: 400;
+    font-weight: 100;
 }
 @media  all and (max-width: 768px) {
     .sec12-text {
         font-size: calc(35% + 2vw + 1vh);
-        font-weight: 400;
     }
 }
 
@@ -526,13 +562,15 @@ header .btn-outline-success:hover, header .btn:hover {
     font-size: 0.9rem;
     font-weight: 500;
     width: 100%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 .container-section4 input:focus {
     background-color: var(--section4-input);
     letter-spacing: 1px; 
     color:white;
-    padding: 4px 3px;
+    padding: 10px 6px;
     font-weight: 500;
     outline: none !important;
     -webkit-box-shadow: none !important;
@@ -550,17 +588,17 @@ header .btn-outline-success:hover, header .btn:hover {
     width: -moz-fit-content;
     width: fit-content;
     opacity: 1;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .container-section4 button:hover, .container-section4 button:focus {
     background-color: var(--section4-Button);
     color: var(--section4-BG);
     border: 2px solid var(--section4-BG);
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 @media all and (max-width: 576px) {
     .container-section4 input{
@@ -576,10 +614,9 @@ header .btn-outline-success:hover, header .btn:hover {
     }
     .form-group {
         margin-bottom: 1rem !important;
-        
     }
 }
 
 .h1, .h2, .h3, .display-3, .display-2, .display-1, .display-4 {
-    font-family: 'Times CE Roman', 'Times_CE_Roman' !important;
+    font-family: 'Times', Georgia, 'Times New Roman', Times, serif !important;
 }

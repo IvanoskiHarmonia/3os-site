@@ -4,7 +4,7 @@ var prevScrollpos = window.pageYOffset;
 window.onload = function() {
     changeNavbarColor();
 
-    mediaQuery("(max-width:870px)");
+    mediaQueryContact("(max-width:870px)");
     (async () => {
         await appearElements(document.getElementById("navbar"));
         await appearElements(document.getElementById("section1"));
@@ -16,7 +16,7 @@ function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 
 // when window is resized always check if media query is true:
 window.onresize = function() {
-    mediaQuery("(max-width: 870px)");
+    mediaQueryContact("(max-width: 870px)");
 }
 
 
@@ -94,11 +94,11 @@ function changeShadowDir(shadDark, shadLight) {
 
 
 // changing text of contant on different witdh of screen:
-function mediaQuery(width) {
+function mediaQueryContact(width) {
     if(window.matchMedia(width).matches) 
-        document.getElementById("contacts").innerHTML = "(305) 558-7798<br>SAYHELLO@3OS.COM";
+        document.getElementById("contacts").innerHTML = "(305) 558-7798<br>HELLO@3OS.US";
     else 
-        document.getElementById("contacts").innerHTML = "(305) 558-7798 &emsp;|&emsp; SAYHELLO@3OS.COM";
+        document.getElementById("contacts").innerHTML = "(305) 558-7798 &emsp;|&emsp; HELLO@3OS.US";
 }
 
 
