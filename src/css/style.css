@@ -23,7 +23,7 @@
         url('../fonts/filson/FilsonPro-Regular.woff') format('woff'), /* Pretty Modern Browsers */
         url('../fonts/filson/FilsonPro-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
         url('../fonts/filson/FilsonPro-Regular.svg#FilsonPro-Regular') format('svg'); /* Legacy iOS */
-    font-weight: 500;
+    font-weight: 100 !important;
     font-style: normal;
     font-display: swap;
 }
@@ -125,9 +125,10 @@ body::-webkit-scrollbar {
     letter-spacing: -2px;
 }
 .filsonpro-regular-normal {
-    font-family: 'Filson Pro', Georgia, 'Times New Roman', Times, serif !important;
+    font-family: 'Filson Pro', 'Times New Roman' !important;
     letter-spacing: 0px;
-    font-weight: 100 !important;
+    /* font-weight: 100 !important; */
+    /* font-weight: normal !important; */
 }
 .hide {
     opacity: 0;
@@ -261,8 +262,8 @@ header .btn-outline-success:hover, header .btn:hover {
     font-size: calc(100% + 2vw + 1vh);
 }
 .sec12-text {
-    font-size: calc(35% + 0.8vw + 1vh);
-    font-weight: 100;
+    font-size: calc(35% + 0.4vw + 1vh);
+    font-weight: 100 !important;
 }
 @media (min-width: 1200px) {
     .container-section1 .container {
@@ -447,12 +448,12 @@ header .btn-outline-success:hover, header .btn:hover {
     height: -moz-fit-content;
     height: fit-content;
     position: absolute;
-    -webkit-transform: translate(0%, -90%);
-        -ms-transform: translate(0%, -90%);
-            transform: translate(0%, -90%);
+    -webkit-transform: translate(0%, -55%);
+        -ms-transform: translate(0%, -55%);
+            transform: translate(0%, -55%);
     fill: rgba(255, 255, 255, 0.3);
     z-index: 5;
-    overflow-x: hidden;
+    overflow:hidden;
 }
 .logo-g {
     -webkit-transform: translate(-10.000000,42.000) scale(0.1,0.1);
