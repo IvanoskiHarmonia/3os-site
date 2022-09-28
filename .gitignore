@@ -131,6 +131,8 @@ dist
 
 
 # custom files
+**/.DS_Store
+.DS_Store
 extras/
 3osTheme/
 /src/colors/
